@@ -9,7 +9,7 @@ pipeline {
     triggers {
         // Poll the Git repository for changes every minute
         pollSCM('* * * * *')
-    }
+    } 
     stages {
         stage('Checkout') {
             steps {
