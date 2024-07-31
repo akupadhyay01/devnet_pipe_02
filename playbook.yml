@@ -1,0 +1,7 @@
+---
+- name: Apply configuration to Cisco CSR1000v router
+  hosts: r1
+  gather_facts: no
+  tasks:
+    - name: Apply configuration from config file
+      import_tasks: "{{ config_file }}"
