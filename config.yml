@@ -1,0 +1,15 @@
+- name: Configure VLAN
+  ios_config:
+    lines:
+      - vlan 10
+      - name Engineering
+    before:
+      - no vlan 10
+
+- name: Configure Interface
+  ios_config:
+    lines:
+      - interface GigabitEthernet1
+      - description Connection to Switch
+      - switchport mode access
+      - switchport access vlan 10
