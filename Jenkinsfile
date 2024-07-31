@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the repository containing the Ansible playbook, inventory, and config files
-                git 'https://your-git-repo-url.git'
+                git 'https://github.com/akupadhyay01/devnet_pipe_02.git'
             }
         }
         stage('Run Ansible Playbook') {
