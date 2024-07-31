@@ -5,7 +5,7 @@ pipeline {
         INVENTORY_FILE = 'inventory.yml'
         CONFIG_FILE = 'config.yml'
         ROUTER_IP = '192.168.94.12'
-    }
+    } 
     triggers {
         // Poll the Git repository for changes every minute
         pollSCM('* * * * *')
