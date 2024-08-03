@@ -1,10 +1,10 @@
 ---
 - name: Update hostname of Cisco IOS router
-  hosts: r1
+  hosts: r2
   gather_facts: no
   tasks:
     - name: Update hostname
       cisco.ios.ios_config:
         lines:
-          - hostname r2
+          - hostname r3
         save_when: always
