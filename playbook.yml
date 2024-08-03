@@ -6,5 +6,5 @@
     - name: Update hostname
       cisco.ios.ios_config:
         lines:
-          - hostname r4
+          - hostname r5
         save_when: always
