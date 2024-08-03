@@ -1,6 +1,6 @@
 all:
   hosts:
-    r1:
+    r2:
       # #### for Cisco IOS devices
       ansible_host: "192.168.94.12"
       ansible_network_os: cisco.ios.ios
