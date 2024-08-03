@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clone the GitHub repository
+                git url: 'https://github.com/akupadhyay01/devnet_pipe_02.git', branch: 'main'
+            }
+        }
+
+        stage('Run Ansible Playbook') {
+            steps {
+                ansiblePlaybook credentialsId: '7f9e5c35-eb84-4255-b2b7-c632ea7b65f6', disableHostKeyChecking: true, installation: 'ansible_exe_location', inventory: 'inventory.yml', playbook: 'playbook.yml', vaultTmpPath: ''
+                
+            }
+        }
+    }
+
+}
