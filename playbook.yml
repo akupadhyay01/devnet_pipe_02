@@ -5,6 +5,7 @@
   ignore_unreachable: true
   tasks:
     - name: Update hostname
+      ignore_errors: true
       cisco.ios.ios_config:
         lines:
           - hostname r5
