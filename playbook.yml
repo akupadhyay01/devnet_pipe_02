@@ -4,7 +4,7 @@
   gather_facts: no
   ignore_unreachable: true
   tasks:
-    - name: Update hostname
+    - name: Update hostname 
       ignore_errors: true
       cisco.ios.ios_config:
         lines:
